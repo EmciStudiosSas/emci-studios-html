@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emci Studios — Innovación audiovisual + IA</title>
+<meta name="description" content="Productora audiovisual en Bogotá. Creación de contenidos, eventos, marketing digital y soluciones con inteligencia artificial." />
+<link rel="icon" href="assets/emci-logo.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: '#0a0a0a',
+          foreground: '#fafafa',
+          card: '#141414',
+          border: '#262626',
+          muted: '#a1a1aa',
+          primary: '#e12828',
+          'primary-foreground': '#ffffff',
+          input: '#171717',
+          secondary: '#1f1f1f',
+        },
+        animation: {
+          float: 'float 6s ease-in-out infinite',
+          'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+          marquee: 'marquee 30s linear infinite',
+        },
+        keyframes: {
+          float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+          pulseGlow: { '0%,100%': { opacity: 0.4 }, '50%': { opacity: 0.8 } },
+          marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { background:#0a0a0a; color:#fafafa; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .text-gradient { background: linear-gradient(135deg,#e12828,#ff6b35); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .bg-gradient-primary { background: linear-gradient(135deg,#e12828,#ff3a3a); }
+  .bg-gradient-hero { background: linear-gradient(180deg,#0a0a0a 0%,#1a0606 100%); }
+  .bg-gradient-card { background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); }
+  .shadow-glow { box-shadow: 0 0 30px rgba(225,40,40,0.35); }
+  .shadow-elegant { box-shadow: 0 20px 60px -10px rgba(0,0,0,0.6); }
+  .transition-smooth { transition: all .3s ease; }
+  .glow-border { border: 1px solid rgba(225,40,40,0.15); }
+  .grid-bg { background-image: linear-gradient(rgba(225,40,40,0.08) 1px,transparent 1px), linear-gradient(90deg,rgba(225,40,40,0.08) 1px,transparent 1px); background-size: 40px 40px; }
+  .text-muted-foreground { color:#a1a1aa; }
+  .border-border { border-color:#262626; }
+  .bg-card { background:#141414; }
+  .bg-input { background:#171717; }
+  .bg-background { background:#0a0a0a; }
+  input:focus, textarea:focus { outline:none; border-color:#e12828; box-shadow: 0 0 0 3px rgba(225,40,40,0.25); }
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-black/70 border-b border-border">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2"><img src="assets/emci-logo.png" alt="Emci Studios" class="h-9 w-auto" /></a>
+    <nav class="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+      <a href="#servicios" class="hover:text-white transition-smooth">Servicios</a>
+      <a href="#nosotros" class="hover:text-white transition-smooth">Nosotros</a>
+      <a href="#contacto" class="hover:text-white transition-smooth">Contacto</a>
+    </nav>
+    <a href="https://wa.me/573212970259" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-primary text-white text-sm font-medium shadow-glow hover:scale-105 transition-smooth">Contáctanos →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative min-h-screen flex items-center pt-16 bg-gradient-hero">
+  <div class="absolute inset-0 opacity-60 bg-cover bg-center" style="background-image:url('assets/hero-bg.jpg')"></div>
+  <div class="absolute inset-0 grid-bg opacity-40"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom, transparent, rgba(10,10,10,0.4), #0a0a0a);"></div>
+  <div class="relative max-w-7xl mx-auto px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/50 text-xs uppercase tracking-widest text-muted-foreground mb-6">✨ Bogotá · Colombia</div>
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] mb-6">Innovación audiovisual<span class="block text-gradient">+ IA al servicio de tu marca</span></h1>
+      <p class="text-lg md:text-xl text-muted-foreground max-w-xl mb-10">Producción, Eventos, Marketing Digital y Soporte con Inteligencia Artificial. Transformamos ideas en experiencias audiovisuales impactantes.</p>
+      <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+        <a href="https://wa.me/573212970259" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-gradient-primary text-white font-medium shadow-glow hover:scale-105 transition-smooth">Contáctanos por WhatsApp →</a>
+        <a href="#servicios" class="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border border-border bg-card/50 backdrop-blur hover:bg-card transition-smooth">Ver servicios</a>
+      </div>
+    </div>
+    <div class="relative hidden lg:block animate-float">
+      <div class="absolute -inset-10 bg-primary/20 blur-3xl rounded-full animate-pulse-glow"></div>
+      <img src="assets/emci-logo.png" alt="Emci Studios" class="relative w-full max-w-md mx-auto" style="filter:drop-shadow(0 0 40px rgba(225,40,40,0.5))" />
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="relative py-20 md:py-32 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 max-w-2xl mx-auto">
+      <p class="text-sm uppercase tracking-[0.3em] text-primary mb-4">Qué hacemos</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Servicios <span class="text-gradient">de nueva generación</span></h2>
+      <p class="text-muted-foreground">Combinamos producción audiovisual, estrategia digital e inteligencia artificial para crear contenido que mueve audiencias.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="group p-6 sm:p-8 rounded-2xl bg-gradient-card border border-border glow-border hover:-translate-y-2 hover:shadow-elegant transition-smooth">
+        <div class="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow text-white text-2xl">🎬</div>
+        <h3 class="text-xl font-semibold mb-3">Creación de Contenidos</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">Producción audiovisual de alto impacto: video, foto y postproducción cinematográfica.</p>
+      </article>
+      <article class="group p-6 sm:p-8 rounded-2xl bg-gradient-card border border-border glow-border hover:-translate-y-2 hover:shadow-elegant transition-smooth">
+        <div class="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow text-white text-2xl">📅</div>
+        <h3 class="text-xl font-semibold mb-3">Eventos</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">Cobertura, transmisión y producción técnica de eventos presenciales e híbridos.</p>
+      </article>
+      <article class="group p-6 sm:p-8 rounded-2xl bg-gradient-card border border-border glow-border hover:-translate-y-2 hover:shadow-elegant transition-smooth">
+        <div class="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow text-white text-2xl">📣</div>
+        <h3 class="text-xl font-semibold mb-3">Marketing Digital</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">Estrategia de marca, redes sociales y campañas pagas orientadas a resultados.</p>
+      </article>
+      <article class="group p-6 sm:p-8 rounded-2xl bg-gradient-card border border-border glow-border hover:-translate-y-2 hover:shadow-elegant transition-smooth">
+        <div class="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 shadow-glow text-white text-2xl">🤖</div>
+        <h3 class="text-xl font-semibold mb-3">Soporte con IA</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">Automatización creativa, generación de assets y flujos inteligentes con IA.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="relative py-20 md:py-32 px-6 border-y border-border">
+  <div class="absolute inset-0 grid-bg opacity-20"></div>
+  <div class="relative max-w-5xl mx-auto text-center">
+    <p class="text-sm uppercase tracking-[0.3em] text-primary mb-4">Sobre Emci Studios</p>
+    <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 leading-tight">En Emci Studios <span class="text-gradient">transformamos ideas</span> en experiencias audiovisuales impactantes.</h2>
+    <p class="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">Somos una productora audiovisual con sede en Bogotá, Colombia. Con experiencia en producción cinematográfica, eventos en vivo y campañas digitales, integramos inteligencia artificial en cada etapa creativa para ofrecer soluciones más rápidas, eficientes y memorables.</p>
+    <div class="mt-12 inline-flex items-center gap-2 text-muted-foreground">📍 Bogotá, Colombia</div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section class="relative py-16 overflow-hidden border-y border-border">
+  <div class="absolute inset-0 grid-bg opacity-15"></div>
+  <div class="relative text-center mb-10">
+    <p class="text-sm uppercase tracking-[0.3em] text-primary mb-2">Confían en nosotros</p>
+    <h2 class="text-3xl md:text-4xl font-bold">Nuestros <span class="text-gradient">clientes</span></h2>
+  </div>
+  <div class="relative flex overflow-hidden">
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 h-16 w-32 z-10 pointer-events-none" style="background:linear-gradient(to right,#0a0a0a,transparent)"></div>
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 h-16 w-32 z-10 pointer-events-none" style="background:linear-gradient(to left,#0a0a0a,transparent)"></div>
+    <div class="animate-marquee flex items-center gap-16 whitespace-nowrap pr-16 shrink-0">
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">LA NOTA ECONOMICA</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">BIMOTOR CONCESIONARIO</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">LOCALIDAD RUU</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">FX 360</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">INDEPENDIENTES FREELANCER</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+    </div>
+    <div class="animate-marquee flex items-center gap-16 whitespace-nowrap pr-16 shrink-0" aria-hidden="true">
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">LA NOTA ECONOMICA</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">BIMOTOR CONCESIONARIO</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">LOCALIDAD RUU</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">FX 360</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+      <span class="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground/60 uppercase tracking-widest">INDEPENDIENTES FREELANCER</span><span class="w-2 h-2 rounded-full bg-primary/40"></span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="relative py-20 md:py-32 px-6">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+    <div>
+      <p class="text-sm uppercase tracking-[0.3em] text-primary mb-4">Contacto</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Hablemos de tu <span class="text-gradient">próximo proyecto</span></h2>
+      <p class="text-muted-foreground mb-10 max-w-md">Estamos listos para llevar tu idea al siguiente nivel. Escríbenos por el medio que prefieras.</p>
+      <div class="space-y-4 mb-10">
+        <a href="tel:3212970259" class="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary transition-smooth">
+          <div class="w-11 h-11 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow text-white">📞</div>
+          <div><p class="text-xs text-muted-foreground">Teléfono</p><p class="font-medium">+57 321 297 0259</p></div>
+        </a>
+        <a href="mailto:comercial@emcistudios.com" class="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary transition-smooth">
+          <div class="w-11 h-11 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow text-white">✉️</div>
+          <div><p class="text-xs text-muted-foreground">Correo</p><p class="font-medium">comercial@emcistudios.com</p></div>
+        </a>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://wa.me/573212970259" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-primary text-white text-sm font-medium shadow-glow hover:scale-105 transition-smooth">📞 WhatsApp</a>
+        <a href="mailto:comercial@emcistudios.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card hover:bg-secondary transition-smooth text-sm">✉️ Email</a>
+      </div>
+    </div>
+    <form id="contactForm" class="p-6 sm:p-8 rounded-2xl bg-gradient-card border border-border glow-border space-y-5">
+      <div>
+        <label class="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Nombre</label>
+        <input id="f-name" required class="w-full px-4 py-3 rounded-lg bg-input border border-border" placeholder="Tu nombre" />
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Email</label>
+        <input id="f-email" type="email" required class="w-full px-4 py-3 rounded-lg bg-input border border-border" placeholder="tu@email.com" />
+      </div>
+      <div>
+        <label class="text-xs uppercase tracking-wider text-muted-foreground mb-2 block">Mensaje</label>
+        <textarea id="f-msg" rows="5" required class="w-full px-4 py-3 rounded-lg bg-input border border-border resize-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+      </div>
+      <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-white font-medium shadow-glow hover:scale-[1.02] transition-smooth">Enviar mensaje →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-border py-12 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <img src="assets/emci-logo.png" alt="Emci Studios" class="h-8 w-auto" />
+    <div class="flex items-center gap-4 text-muted-foreground text-xl">
+      <a href="#" class="hover:text-primary">📷</a>
+      <a href="#" class="hover:text-primary">📘</a>
+      <a href="#" class="hover:text-primary">💼</a>
+    </div>
+    <p class="text-xs text-muted-foreground">© <span id="yr"></span> Emci Studios S.A.S. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('f-name').value;
+    var em = document.getElementById('f-email').value;
+    var m = document.getElementById('f-msg').value;
+    var body = 'Nombre: '+n+'%0AEmail: '+em+'%0A%0A'+encodeURIComponent(m);
+    window.location.href = 'mailto:comercial@emcistudios.com?subject=Contacto%20desde%20web&body='+body;
+  });
+</script>
+</body>
+</html>
